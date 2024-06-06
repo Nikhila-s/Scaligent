@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DemoSuite" parallel="methods" thread-count="2" verbose="2">
+	
+	<listeners>
+		
+		<listener class-name="Demo_Jenkins_TestNG.Demo_Jenkins_TestNG.Listeners.MyListeners.java"></listener>
+		<listener class-name="Demo_Jenkins_TestNG.Demo_Jenkins_TestNG.Listeners.RetryListener.java"></listener>
+		<listener class-name="Demo_Jenkins_TestNG.Demo_Jenkins_TestNG.Listeners.TestParameters.java"></listener>
+		
+	</listeners>
+  <test name="Admin">
+    <classes>
+      <class name="Demo_Jenkins_TestNG.Demo_Jenkins_TestNG.AdminTest"/>
+     
+    </classes>
+  </test> <!-- DemoTest -->
+  
+   <test name="Login Test">
+    <classes>
+      <class name="Demo_Jenkins_TestNG.Demo_Jenkins_TestNG.LoginTest"/>
+      
+    </classes>
+  </test> <!-- DemoTest -->
+  
+</suite> <!-- DemoSuite -->
